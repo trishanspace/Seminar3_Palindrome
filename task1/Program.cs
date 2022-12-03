@@ -5,8 +5,8 @@
 23432 -> да*/
 
 int num = InputInt();
-int len = LengthNumber();
-
+int[] array = GetArray();
+int Reverse = GetReverse();
 
 int InputInt()
 {
@@ -24,23 +24,27 @@ int InputInt()
     }
 }
 
+int[] GetArray()
 {
-    int LengthNumber = (num == 0) ? 1 : (int)Math.Log10(Math.Abs(num)) + 1;
+    int[] array = new int[num];
+    return array;
 }
 
+int GetReverse()
 {
     int n = num;
     int reverse = 0;
-    while (len)
+    while (reverse < array.Length)
     {
         int i = n % 10;
         reverse = reverse * 10 + i;
         n = n / 10;
     }
+    return reverse;
 }
 
 {
-    if (reverse == num)
+    if (Reverse == num)
     {
         Console.WriteLine("да");
     }
